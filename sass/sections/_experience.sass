@@ -1,0 +1,134 @@
+.experience
+  padding: 115px 0
+  &-header
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 70px
+    &-title
+      max-width: 135px
+      margin: 0 0 15px
+      font-size: 26px
+      line-height: 34px
+      color: #8643DC
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        bottom: -5px
+        left: 0
+        width: 50%
+        height: 2px
+        background-color: #8643DC
+    &-description
+      max-width: 80%
+      font-size: 24px
+      line-height: 32px
+      color: #25202F
+      text-align: justify
+    &-achievements
+      display: flex
+      align-items: center
+      flex-shrink: 0
+      &-text
+        font-weight: 500
+        font-size: 18px
+        line-height: 24px
+        text-decoration-line: underline
+        color: #25202F
+        margin-right: 10px
+        cursor: pointer
+      &-button
+        width: 24px
+        height: 24px
+        img
+          width: 100%
+          height: 100%
+          object-fit: contain
+  &-content
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+  &-stack
+    width: 14%
+    display: flex
+    align-items: center
+    justify-content: center
+    margin: 0 3px 50px 0
+  &-extra
+    position: relative
+    padding: 50px 0
+    &-bg
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      background: linear-gradient(180deg, rgba(187, 133, 255, 0.14) 0%, rgba(255, 177, 222, 0.14) 100%)
+      filter: blur(50px)
+      z-index: -1
+    &-title
+      display: none
+    &-container
+      &-item
+        display: flex
+        align-items: center
+        justify-content: space-between
+        margin-bottom: 5%
+        &.pixel
+          &-perfect
+            img
+              order: 1
+    &-img
+      width: 460px
+      height: 405px
+      border-style: none
+      border-radius: 5%
+      object-fit: cover
+      filter: hue-rotate(90deg)
+    &-text
+      max-width: 40%
+      font-size: 24px
+      line-height: 32px
+      color: #666
+
+.jq,
+.jq-ui
+  width: 21% !important
+
+.container
+  width: 100%
+  display: flex
+  flex-direction: column
+  padding: 2vh
+
+.content
+  display: flex
+  height: 80vh
+  margin: 0 auto
+  &-slide
+    height: 0
+    opacity: 0
+    overflow: hidden
+    object-fit: cover
+    transition: opacity 0.9s ease
+  &-active
+    opacity: 1
+    height: 100%
+
+.sub-content
+  display: flex
+  transition: 0.9s ease
+  &-slide
+    height: 100px
+    margin: 10px
+    cursor: pointer
+    flex: 1
+    background-size: cover
+    background-position: center
+    background-repeat: no-repeat
+
+.sub-active
+  transition: 0.9s ease
+  transform: translateY(-25px)
+  box-shadow: 0 0 30px #a7b7, 0 0 30px #088fdaad

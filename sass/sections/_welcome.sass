@@ -1,0 +1,94 @@
+.welcome
+  &-section
+    padding: 25px 0 100px
+    position: relative
+  &-title
+    max-width: 60%
+    font-weight: bold
+    font-size: 60px
+    line-height: 72px
+    color: #25202F
+    position: relative
+    margin: 50px 0 65px
+    &::before
+      content: ''
+      top: 5%
+      right: 5%
+      position: absolute
+      width: 50%
+      height: 50%
+      background: #FF82CD
+      filter: blur(100px)
+      transform: matrix(-0.7, 0.54, -0.94, -0.7, 0, 0)
+      z-index: -1
+    &::after
+      content: ''
+      top: -40%
+      right: -40%
+      position: absolute
+      width: 50%
+      height: 50%
+      background: rgba(90,248,153,0.7)
+      filter: blur(100px)
+      transform: matrix(-0.7, 0.54, -0.94, -0.7, 0, 0)
+      z-index: -1
+  &-content
+    max-width: 55%
+    font-weight: 500
+    font-size: 24px
+    line-height: 29px
+    color: #666666
+    position: relative
+    &::before
+      content: ''
+      top: 30%
+      right: -15%
+      position: absolute
+      width: 50%
+      height: 50%
+      background: #FFDF6C
+      filter: blur(100px)
+      transform: matrix(-0.7, 0.54, -0.94, -0.7, 0, 0)
+      z-index: -1
+    &::after
+      content: ''
+      top: -25%
+      right: -55%
+      position: absolute
+      width: 50%
+      height: 50%
+      background: #AC6AFF
+      filter: blur(100px)
+      transform: matrix(0.7, -0.54, 0.94, 0.7, 0, 0)
+      z-index: -1
+
+.pseudo
+  &-group
+    position: absolute
+    top: 0
+    right: 0
+    width: 50%
+    height: 100%
+    &-item
+      position: absolute
+  &_01
+    top: 14rem
+    left: 12rem
+  &_02
+    top: 16rem
+    left: 28rem
+  &_03
+    top: -5rem
+    left: 15rem
+  &_04
+    top: -2rem
+    left: -3rem
+  &_05
+    top: 2rem
+    left: 18rem
+  &_06
+    bottom: 5rem
+    left: 5rem
+  &_07
+    left: 23rem
+    top: -3rem

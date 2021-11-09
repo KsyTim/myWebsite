@@ -1,0 +1,86 @@
+.footer
+  padding: 30px 0 50px
+  &-container
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &-links
+    display: flex
+    align-items: center
+  &-link
+    display: block
+    width: 40px
+    height: 40px
+    margin-right: 25px
+    &-pic
+      width: 100%
+      height: 100%
+  &-copyright
+    font-size: 16px
+    line-height: 24px
+    color: #8491A0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 310px
+    flex-basis: 100%
+    &-item
+      display: block
+    &-left
+      position: relative
+      &::after
+        position: absolute
+        content: '.'
+        top: -30%
+        right: -20%
+        font-size: 30px
+
+#totop
+  position: fixed
+  display: none
+  cursor: pointer
+  width: 40px
+  height: 40px
+  bottom: 2%
+  right: 1%
+  margin: -20px 0 0 -20px
+  background-color: #cd66993d
+  border: 3px solid #cd6699
+  border-radius: 50%
+  box-shadow: 0 0 5px #cd6699, 0 0 5px #cd6699
+  z-index: 9
+  &::before,
+  &::after
+    position: absolute
+    display: block
+    content: ''
+    width: 15px
+    height: 15px
+    left: 50%
+    top: 50%
+    border-width: 2px
+    border-style: solid
+    border-color: transparent
+    border-top-color: #cd6699
+    border-left-color: #cd6699
+    border-radius: 5px 0 0 0
+    transform: translate(-50%, -30%) rotate(45deg)
+    transition: all .4s ease-in-out
+  &.active
+    &::before
+      border-radius: 50%
+      margin-top: -5px
+      animation: .8s rotate .4s linear infinite
+    &::after
+      width: 20px
+      height: 20px
+      border-radius: 50%
+      margin-top: -5px
+      animation: .8s rotate2 .4s linear infinite
+
+@keyframes rotate
+  to
+    transform: translate(-50%, -30%) rotate(405deg)
+@keyframes rotate2
+  to
+    transform: translate(-50%, -30%) rotate(-315deg)

@@ -1,0 +1,84 @@
+.header
+  padding: 50px 0
+  font-size: 20px
+  line-height: 26px
+  .wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    nav
+      width: 50%
+.menu
+  &-mobile
+    visibility: hidden
+    opacity: 0
+    &-btn
+      display: none
+    &-item
+      width: 16px
+      height: 2px
+      background-color: #25202F
+      border-radius: 2px
+      transform: rotate(0deg)
+      transition: .5s ease-in-out
+  &-fixed
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 10
+    background-color: rgba(255, 255, 255, 0.9)
+    box-shadow: 0 0 50px #fcd0ea, 0 0 10px #fcd0ea
+    &-bg
+      filter: blur(0)
+
+.nav
+  &-bar
+    list-style: none
+    margin: 0
+    padding: 0
+    display: flex
+    justify-content: space-between
+    &-mobile
+      display: flex
+      list-style: none
+      margin: 0
+      padding: 0
+  &-link
+    text-transform: capitalize
+    font-size: 20px
+    line-height: 26px
+    color: #7E7F86
+
+.lang
+  font-size: 20px
+  line-height: 26px
+  text-transform: uppercase
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 10vw
+  position: relative
+  &::after
+    content: ''
+    position: absolute
+    width: 2px
+    height: 80%
+    left: 49%
+    bottom: 4.5px
+    background-color: #25202F
+  &-item
+    color: #7E7F86
+    padding: 0 6.5px
+    &.active
+      color: #25202F
+      font-weight: 700
+
+.close
+  transition: .5s
+  &_1st
+    transform: translateY(5px) rotate(135deg)
+  &_2nd
+    transform: scale(0)
+  &_3rd
+    transform: translateY(-5px) rotate(-135deg)

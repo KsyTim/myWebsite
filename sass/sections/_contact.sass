@@ -1,0 +1,94 @@
+.contact
+  padding: 50px 0
+  position: relative
+  &-title
+    max-width: 145px
+  &-info
+    font-weight: 500
+    font-size: 35px
+    line-height: 52px
+    margin: 20px 0 80px
+    letter-spacing: 0.5px
+  &-form
+    display: flex
+    flex-direction: column
+    min-height: 293px
+    justify-content: space-between
+    &-item
+      min-height: 40px
+      margin-bottom: 35px
+      outline: none
+      border: none
+      background-color: transparent
+      border-bottom: 1px solid #DAD2E3
+      font-size: 22px
+      line-height: 26px
+      color: #645572
+      letter-spacing: 0.8px
+      &::placeholder
+        font-size: 20px
+        line-height: 26px
+        color: #A8A0B0
+    &-button
+      max-width: 200px
+      min-height: 60px
+      padding: 15px 60px
+      background-color: #8643DC
+      color: #fff
+      border: none
+      outline: none
+      border-radius: 50px
+  .wrapper
+    position: relative
+#message
+  resize: none
+
+.status
+  &-message
+    position: absolute
+    top: 50%
+    right: 50%
+    transform: translate(50%, -50%)
+    width: 60%
+    height: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    color: #fff
+    font-size: 1.5rem
+    line-height: 2.5rem
+    text-align: center
+    border-radius: 15px
+  &-dots
+    animation-duration: 2.0s
+    width: 4em
+    height: 4em
+    position: relative
+    margin: auto
+    text-align: center
+    animation: status-dots-rotate 2.0s infinite linear
+  &-dot
+    width: (4em / 2)
+    height: (4em / 2)
+    display: inline-block
+    position: absolute
+    top: 0
+    background-color: rgba(37, 32, 47, 0.95)
+    border-radius: 100%
+    animation: status-dots-bounce 2.0s infinite ease-in-out
+    &-second
+      top: auto
+      bottom: 0
+      animation-delay: (-2.0s / 2)
+
+@keyframes status-dots-rotate
+  100%
+    transform: rotate(360deg)
+
+@keyframes status-dots-bounce
+  0%, 100%
+    transform: scale(0)
+
+  50%
+    transform: scale(1.0)
