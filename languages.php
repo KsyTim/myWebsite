@@ -19,6 +19,7 @@ return [
     'projects-content' => [
       [
         'img' => '3d-model',
+        'git-link' => '3d-model-lesson30-branch-/tree/lesson30',
         'projects-content-title' => 'Дизайн-агентство 3D Model',
         'projects-content-technologies' => 'Технологии: HTML, CSS, Bootstrap, JS, PHP, Webpack',
         'projects-content-more' => 'Лэндинг-страница дизайн-агенства, где реализованы: таймер, POST-запросы (с использованием fetch API) для форм на сайте, простые JS анимации для мобильного меню и модальной формы, табы, слайдер на чистом JS, а также калькулятор работ.',
@@ -26,6 +27,7 @@ return [
       ],
       [
         'img' => 'desktop',
+        'git-link' => 'desktop',
         'projects-content-title' => 'Клон "Рабочий стол" на jQuery',
         'projects-content-technologies' => 'Технологии: HTML, CSS, CSS Flexbox, jQuery, jQuery UI',
         'projects-content-more' => 'Своеобразный симулятор рабочего стола, где реализован функционал перетаскивания файлов с рабочего стола в папки, из папки в папку, и из папки на рабочий стол с сохранением текущего состояния их расположения в локальном хранилище (localStorage). Могу реализовать подобный функционал на чистом JS, используя drag&drop собятия (например, примерно похожая мини-работа реализована мной на <a href="https://jsfiddle.net/KsyTim/9Ltwd5v0/4/" target="_blank" rel="noopener noreferrer">JSFiddle</a>).',
@@ -33,6 +35,7 @@ return [
       ],
       [
         'img' => 'fitness',
+        'git-link' => 'fitness',
         'projects-content-title' => 'Фитнес-клуб "Тело"',
         'projects-content-technologies' => 'Технологии: HTML, CSS, CSS Flexbox, JS',
         'projects-content-more' => 'Многостраничный сайт, где реализованы слайдеры, модальные окна, POST-запросы (с использованием fetch API) для форм на сайте, калькулятор (который парсит стоимость абонементов со страниц клубов сайта путем обращения к объекту DOMParser()), а также Яндекс.Карты.',
@@ -40,6 +43,7 @@ return [
       ],
       [
         'img' => 'toDo-oop',
+        'git-link' => 'js_hard/tree/master/to_do_oop',
         'projects-content-title' => 'To Do',
         'projects-content-technologies' => 'Технологии: HTML, CSS, JS',
         'projects-content-more' => 'Приложение реализовано в ООП стиле. Различные состояния "дел, которые необходимо выполнить (To Do)" анимированы с помощью JS. В приложении обработчик событий реализован с использованием делегирования (как и во всех других моих проектах). Текущеее состояние "дел, которые необходимо выполнить (To Do)" обновляется и сохраняется в локальном хранилище (localStorage).',
@@ -47,6 +51,7 @@ return [
       ],
       [
         'img' => 'tour-plan',
+        'git-link' => 'tour-plan',
         'projects-content-title' => 'Агентство "Tour Plan"',
         'projects-content-technologies' => 'Технологии: PHP, HTML, CSS, CSS Flexbox, CSS Grid Layout, jQuery, JS, SASS',
         'projects-content-more' => 'На сайте реализованы слайдеры  с помощью Swiper, отправка данных форм обратной связи и модальных окон POST-методом на почту с помощью PHP библиотеки - PHPMailer, Google Карты, анимация элементов с помощью JS&CSS3 библотеки Animation at Scroll - AOS, parallax эффект для секции с подпиской, а также валидация и маски для полей форм на сайте с помощью плагинов jQuery Mask & jQuery Validator.',
@@ -54,6 +59,7 @@ return [
       ],
       [
         'img' => 'universal',
+        'git-link' => 'universal',
         'projects-content-title' => 'ИТ блог о веб-разработке - Universal',
         'projects-content-technologies' => 'Технологии: PHP, HTML, CSS, CSS Flexbox, CSS Grid Layout, jQuery, JS, SASS',
         'projects-content-more' => 'Многостраничный сайт, где реализованы табы, слайдеры с помощью Swiper, отправка данных форм обратной связи и модальных окон POST-методом на почту с помощью PHP библиотеки - PHPMailer, parallax эффект для раздела перехода на дочернюю страницу сайта, а также валидация и маски для полей форм на сайте с помощью плагинов jQuery Mask & jQuery Validator.',
@@ -104,6 +110,7 @@ return [
     'projects-content' => [
       [
         'img' => '3d-model',
+        'git-link' => '3d-model-lesson30-branch-/tree/lesson30',
         'projects-content-title' => 'Design Agency 3D Model',
         'projects-content-technologies' => 'Technologies: HTML, CSS, Bootstrap, JS, PHP, Webpack',
         'projects-content-more' => 'Design agency landing page, where implements the timer, POST-requests using fetch API for the site forms, simple JS animation for mobile menu and modal window, tabs, pure JS slider, and a calculator.',
@@ -111,6 +118,7 @@ return [
       ],
       [
         'img' => 'desktop',
+        'git-link' => 'desktop',
         'projects-content-title' => 'Desktop Clone jQuery',
         'projects-content-technologies' => 'Technologies: HTML, CSS, CSS Flexbox, jQuery, jQuery UI',
         'projects-content-more' => 'The desktop simulator application where you can move files from your desktop to folders, from folder to folder, while maintaining the current state in localStorage. I can implement similar functionality on pure JS using drag&drop events (for example, the similar project which I implemented on <a href="https://jsfiddle.net/KsyTim/9Ltwd5v0/4/" target="_blank" rel="noopener noreferrer">JSFiddle</a>).',
@@ -118,6 +126,7 @@ return [
       ],
       [
         'img' => 'fitness',
+        'git-link' => 'fitness',
         'projects-content-title' => 'Fitness Club "Body"',
         'projects-content-technologies' => 'Technologies: HTML, CSS, CSS Flexbox, JS',
         'projects-content-more' => 'The multi-page site that implements sliders, modal window, POST-requests using fetch API for the site forms, calculator that parses the subscriptions cost from neighboring sites using the object DOMParser, Yandex Maps.',
@@ -125,6 +134,7 @@ return [
       ],
       [
         'img' => 'toDo-oop',
+        'git-link' => 'js_hard/tree/master/to_do_oop',
         'projects-content-title' => 'To Do',
         'projects-content-technologies' => 'Technologies: HTML, CSS, JS',
         'projects-content-more' => 'The application is implemented in an OOP style. Various states of "affairs To Do" on the list are animated via JS. In the application, the event handler is implemented using delegation (such as in all my other projects). The current state of "affairs To Do" is updated and stored in localStorage.',
@@ -132,6 +142,7 @@ return [
       ],
       [
         'img' => 'tour-plan',
+        'git-link' => 'tour-plan',
         'projects-content-title' => 'Agency "Tour Plan"',
         'projects-content-technologies' => 'Technologies: PHP, HTML, CSS, CSS Flexbox, CSS Grid Layout, jQuery, JS, SASS',
         'projects-content-more' => 'The site implements sliders using the Swiper, sending feedback forms and modal windows by the POST-method using the PHP library - PHPMailer, Google Maps, elements animation using the JS&CSS3 library Animation at Scroll - AOS, subscription section parallax effect, as well as form fields validation and masks using jQuery Mask & jQuery Validator plugins.',
@@ -139,6 +150,7 @@ return [
       ],
       [
         'img' => 'universal',
+        'git-link' => 'universal',
         'projects-content-title' => 'IT Blog about web-development',
         'projects-content-technologies' => 'Technologies: PHP, HTML, CSS, CSS Flexbox, CSS Grid Layout, jQuery, JS, SASS',
         'projects-content-more' => 'The multi-page site that implements tabs, sliders using Swiper, sending feedback forms and modal windows by the POST-method using the PHP library - PHPMailer, parallax effect for the transition section to the child page, as well as form fields validation and masks using jQuery Mask & jQuery Validator plugins.',

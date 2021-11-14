@@ -230,6 +230,9 @@ $lang = $_GET['lang'] === 'ru' ? $ru : $en;
             <div class="slide slide-<?= $key + 1 ?>">
               <img src="./img/<?= $value['img'] ?>.png" alt="">
               <div class="projects-content-description">
+                <a href="https://github.com/KsyTim/<?= $value['git-link'] ?>" class="projects-content-description__github" target="_blank" rel="noopener noreferrer">
+                  <img src="./img/footer-github.svg" alt="Github">
+                </a>
                 <a href="#" class="projects-content-title"><?= $value['projects-content-title'] ?></a>
                 <div class="projects-content-text">
                   <div class="projects-content-technologies"><?= $value['projects-content-technologies'] ?></div>
