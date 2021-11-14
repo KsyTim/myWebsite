@@ -35,6 +35,8 @@ class website {
     this.email = this.document.getElementById('email');
     this.message = this.document.getElementById('message');
     this.langItem = this.document.querySelectorAll('.lang-item');
+    this.contactFormItem = this.document.querySelectorAll('.contact-form-item');
+    this.fillFormMessage = this.document.querySelector('.contact-form-fill');
     this.mobileMenuBehaviour = this.mobileMenuBehaviour.bind(this);
     this.removeActiveExperienceClasses = this.removeActiveExperienceClasses.bind(this);
     this.overlayVisible = this.overlayVisible.bind(this);
@@ -72,6 +74,8 @@ class website {
     this.init = this.init.bind(this);
     this.setLanguage = this.setLanguage.bind(this);
     this.setLanguageActiveClass = this. setLanguageActiveClass.bind(this);
+    this.emptyCheck = this.emptyCheck.bind(this);
+    this.fillForm = this.fillForm.bind(this);
     this.x1 = null;
     this.y1 = null;
   }
@@ -480,14 +484,36 @@ class website {
       }, 1000);
     }
   }
+  // check if all gap in form filled
+  emptyCheck(event) {
+    let mark;
+    this.contactFormItem.forEach(item => {
+      mark = item.value ? true : false;
+    })
+    if (mark) {
+      this.sendMail(event);
+    } else {
+      this.fillForm();
+    }
+  }
+  // message if some form input empty
+  fillForm() {
+    this.fillFormMessage.style.display = 'block';
+    if (window.location.search.substr(6) === 'ru') {
+      this.fillFormMessage.textContent = 'Пожалуйста, заполните все поля формы!';
+    } else {
+      this.fillFormMessage.textContent = 'Please fill in the form!'
+    }
+  }
   // after sending mail
   sending = (resp) => {
-    this.input.forEach(item => {
-      item.value = '';
-    });
-    this.textarea.value = '';
+    this.contactFormItem.forEach(elem => {
+      elem.value = '';
+    })
     this.statusMessage.style.backgroundColor = 'rgba(37, 32, 47, 0.85)';
     this.statusMessage.innerHTML = `${resp}`;
+    this.fillFormMessage.style.display = 'none';
+    this.fillFormMessage.textContent = '';
     setTimeout(()=> {
       this.statusMessage.style.backgroundColor = 'transparent';
       this.statusMessage.innerHTML = '';
@@ -513,15 +539,16 @@ class website {
         method: 'POST',
         body: data
       }).then((response) => {
-        if (!response.ok) {
-          throw new Error('status network is not 200');
-        }
         const enResponse = `Thank you!<br>I will contact you as soon as possible!`,
           ruResponse = `Благодарю Вас!<br>Я свяжусь с Вами в ближайшее время!`;
-        if (window.location.search.substr(6) === 'ru') {
-          this.sending(ruResponse);
+        if (!response.ok) {
+          throw new Error('status network is not 200');
         } else {
-          this.sending(enResponse);
+          if (window.location.search.substr(6) === 'ru') {
+            this.sending(ruResponse);
+          } else {
+            this.sending(enResponse);
+          }
         }
       }).catch(error => {
         console.error(error);
@@ -688,8 +715,23 @@ class website {
     // submit event for sending mail
     this.document.addEventListener('submit', event => {
       event.preventDefault();
-      this.sendMail(event);
-    });  
+      this.emptyCheck(event);
+    }); 
+    this.contactFormItem.forEach(elem => {
+      elem.addEventListener('blur', (event) => {
+        event.target.value = event.target.value.trim();
+        if (event.target.matches('[name="name"]')) {
+          event.target.value = event.target.value.replace(/[0-9/.,\-+=_)({*&$%#@'"!~^:;?`<>№|\\})]/gi, '');
+          event.target.value = event.target.value.replace(/ {2,}/g, ' ');
+        } else if (event.target.matches('[name="email"]')) {
+          event.target.value = event.target.value.replace(/[а-яё/, +=)({&$%#^:;?`<>№|\\})]/gi, '');
+        } else if (event.target.matches('[name="message"]')) {
+          event.target.value = event.target.value.replace(/[+=)({*&$%#~^`<>№|\\})]/gi, '');
+					event.target.value = event.target.value.replace(/ {2,}/g, ' ');
+					event.target.value = event.target.value.replace(/^( *-* *)|( *-* *)$/g, '');
+        }
+      }) 
+    })
   }
 }
 

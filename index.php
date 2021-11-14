@@ -258,9 +258,10 @@ $lang = $_GET['lang'] === 'ru' ? $ru : $en;
       <p class="contact-info"><?= $lang['contact-info'] ?></p>
       <form action="./sendMail.php" method="POST" class="contact-form">
         <?php foreach ($lang['contact-form-input'] as $key => $value) { ?>
-          <input type="<?= $key ?>" name="<?= $value['name'] ?>" id="<?= $value['id'] ?>" placeholder="<?= $value['placeholder'] ?>" class="contact-form-item" required>
+          <input type="<?= $key ?>" name="<?= $value['name'] ?>" id="<?= $value['id'] ?>" placeholder="<?= $value['placeholder'] ?>" class="contact-form-item">
         <?php } ?>
         <textarea name="<?= $lang['contact-form-textarea']['name'] ?>" id="<?= $lang['contact-form-textarea']['id'] ?>" cols="30" rows="10" placeholder="<?= $lang['contact-form-textarea']['placeholder'] ?>" class="contact-form-item"></textarea>
+        <div class="contact-form-fill"></div>
         <button class="contact-form-button" type="submit"><?= $lang['contact-form-button'] ?></button>
       </form>
     </div>
